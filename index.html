@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>FizzBuzz</h1>
+      <div class="container" id="code">
+        <script src="script.js"></script>
+      </div>
+      <h1>JavaScript</h1>
+      <div class="container flex">
+        <pre>
+        var elem = document.getElementById("code");
+
+        for (var i = 1; i < 101; i++) {
+        var temp = document.createElement("p");
+        temp.id = i;
+        elem.appendChild(temp);
+        }
+
+        for (var i = 1; i < 101; i++) {
+        var test = document.getElementById(i);
+        if (i % 3 == 0 && i % 5 == 0) {
+            test.innerHTML = "FizzBuzz";
+        } else if (i % 3 == 0) {
+            test.innerHTML = "Fizz";
+        } else if (i % 5 == 0) {
+            test.innerHTML = "Buzz";
+        } else {
+            test.innerHTML = i;
+        }
+        </pre>
+      </div>
+      <h1>CSS</h1>
+      <div class="container flex">
+        <pre>
+            * {
+                padding: 0px;
+                margin: 0px;
+              }
+              
+              .main {
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100%;
+                background-color: rgb(42, 42, 42);
+              }
+              
+              .main h1 {
+                margin-right: 40%;
+                font-family: sans-serif;
+                color: white;
+              }
+              
+              .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                position: relative;
+                overflow-y: auto;
+                width: 50vw;
+                height: 50vh;
+                background-color: rgb(42, 42, 42);
+                border: 10px solid black;
+              }
+              
+              .container p {
+                font-family: sans-serif;
+                font-weight: 1000;
+              }
+              
+              .flex {
+                display: flex;
+                align-items: flex-start;
+              }
+              
+              .flex pre {
+                color: yellow;
+                font-size: 20px;
+              }
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
